@@ -1,0 +1,19 @@
+`void movimiento(){
+if(key==CODED){
+X = X-3;
+
+  if(keyCode==UP){
+     posY=posY-5;
+  }
+  if(keyCode==DOWN){
+     posY=posY+5;
+  }
+}
+//Estrablacer los limites hasta los que puede moverse el auto
+if(posY > 350){
+posY = 350;
+}
+if(posY < 30){
+posY = 30;
+}
+}
