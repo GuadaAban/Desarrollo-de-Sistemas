@@ -1,58 +1,37 @@
-PImage auto,fondo,titulo,fondo2;// almacena imagenes
-PImage persona1, persona2, persona3, persona4;
-PFont font;
-boolean introScreen=true;
-
-PImage fondojuego, cuchau;
-int posY = 50;
-int X =450;
-float Y1,Y2,Y3,Y4,Y5,Y6,Y7,Y8,Y9,Y10,Y11,Y12,Y13,Y14,Y15;
-
-void setup () {
- size(900,450);
- //String [] fontList= PFont.list();
- //printArray(fontList); esto dejalo, me sirvio para el tema de la fuente de las letras
- rectMode(CENTER);
- textAlign(CENTER);
- auto= loadImage("autocuchau.png");
- fondo= loadImage("Fondo0.png");
- titulo=loadImage("titulo0.png");
- fondo2=loadImage("Fondo2.png");//esto lo podes quitar, era para ver si funcaba nada más
- font= createFont("Courier New Negrita",30);
- 
- persona1= loadImage("persona1.png");
- persona2= loadImage("persona2.png");
- persona3= loadImage("persona3.png");
- persona4= loadImage("persona4.png");
- 
-  rectMode(CENTER);
-   fondojuego = loadImage("fondojuego.png");
-   cuchau = loadImage("cuchau.png");
+void personas(){
   
-     randoms();
+     image(persona1, X, Y1, 40, 60);
+     image(persona2, X + 150, Y2, 40, 60);
+     image(persona3, X + 300, Y3, 40, 60);
+     image(persona4, X + 450, Y4, 40, 60);
+     image(persona2, X + 600, Y5, 40, 60);
+     image(persona1, X + 750, Y6, 40, 60);
+     image(persona4, X + 1000, Y7, 40, 60);
+     image(persona3, X + 1150, Y8, 40, 60);
+     image(persona1, X + 1300, Y9, 40, 60);
+     image(persona4, X + 1450, Y10, 40, 60);
+     image(persona2, X + 1600, Y11, 40, 60);
+     image(persona4, X + 1750, Y12, 40, 60);
+     image(persona3, X + 2000, Y13, 40, 60);
+     image(persona1, X + 2150, Y14, 40, 60);
+     image(persona2, X + 2300, Y15, 40, 60);
 }
 
-void draw () {
-  if(keyPressed){
-   if(key=='b'|| key=='B'){
-    introScreen=false; 
-   }
-  }
-   if(introScreen==true){
-   image(fondo,0,0,900,450);
-   image(auto,250,210,390,150);
-   image(titulo,200,30, 500, 130);
-   fill(255);
-   fill(0);
-   textFont(font);
-   text("Apreta B para iniciar",450,400);
-   }
-   else{
-      image(fondojuego, 0, 0, 900, 450);
-       
-       image(cuchau, 150, posY, 110, 80);
-       movimiento();
-       
-         personas();
-}
+void randoms()
+{
+    Y1 = random(50,400);
+    Y2 = random(50,400);
+    Y3 = random(50,400);
+    Y4 = random(50,400);
+    Y5 = random(50,400);
+    Y6 = random(50,400);
+    Y7 = random(50,400);
+    Y8 = random(50,400);
+    Y9 = random(50,400);
+    Y10 = random(50,400);
+    Y11 = random(50,400);
+    Y12 = random(50,400);
+    Y13 = random(50,400);
+    Y14 = random(50,400);
+    Y15 = random(50,400);
 }
